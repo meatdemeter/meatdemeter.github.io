@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meat Demeter — Dziękujemy!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f1ea;
+      --ink: #2a1810;
+      --accent: #8b2e1f;
+      --muted: #6b5a4a;
+      --card: #ffffff;
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background-image:
+        radial-gradient(at 20% 10%, rgba(139, 46, 31, 0.08) 0px, transparent 50%),
+        radial-gradient(at 80% 90%, rgba(139, 46, 31, 0.06) 0px, transparent 50%);
+    }
+
+    .card {
+      width: 100%;
+      max-width: 440px;
+      background: var(--card);
+      border-radius: 24px;
+      padding: 48px 32px;
+      text-align: center;
+      box-shadow:
+        0 1px 2px rgba(42, 24, 16, 0.04),
+        0 10px 40px rgba(42, 24, 16, 0.08);
+      animation: rise 0.6s ease-out;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      color: var(--ink);
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    p.lead {
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--muted);
+      margin-bottom: 36px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 auto 28px;
+      max-width: 280px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(42, 24, 16, 0.15);
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 20px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+      color: #ffffff;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+      filter: brightness(1.05);
+    }
+
+    .btn:active { transform: translateY(0); }
+
+    .btn svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
+    .btn-instagram {
+      background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+    }
+
+    .btn-facebook {
+      background: #1877f2;
+    }
+
+    .footer {
+      margin-top: 36px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    @media (max-width: 380px) {
+      .card { padding: 36px 24px; }
+      h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <span class="badge">Witamy</span>
+    <h1>Dziękujemy, że nas <em>odwiedziłeś</em></h1>
+    <p class="lead">
+      Cieszymy się, że jesteś z nami. Bądź na bieżąco — śledź nas w mediach społecznościowych
+      i nie przegap nowości, promocji oraz inspiracji prosto z naszej kuchni.
+    </p>
+
+    <div class="divider">Obserwuj nas</div>
+
+    <div class="buttons">
+      <a class="btn btn-instagram" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+          <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+        </svg>
+        Obserwuj na Instagramie
+      </a>
+
+      <a class="btn btn-facebook" href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2C16.5 3.1 15.5 3 14.4 3c-2.4 0-4 1.5-4 4.2v2.6H7.5V13h2.9v8h3.1z"/>
+        </svg>
+        Polub nas na Facebooku
+      </a>
+    </div>
+
+    <p class="footer">Do zobaczenia wkrótce!<br/><strong>Meat Demeter</strong></p>
+  </main>
+</body>
+</html>
